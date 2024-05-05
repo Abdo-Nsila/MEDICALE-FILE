@@ -1,6 +1,8 @@
 import { Home, Profile } from "@/pages";
 import Admin from "./pages/Admin";
 import Doctor from "./pages/Doctor";
+import SignInDoctor from "./components/Auth/DoctorAuth/sign-in";
+import SignInAdmin from "./components/Auth/AdminAuth/sign-in";
 
 export const routes = [
   {
@@ -17,14 +19,14 @@ export const routes = [
   },
   {
     name: "Doctor",
-    path: "/doctor",
-    element: <Doctor />,
+    path: "/doctor/login",
+    element: <SignInDoctor />,
     id: "doctor",
   },
   {
     name: "Admin",
-    path: "/admin",
-    element: <Admin />,
+    path: "/admin/login",
+    element: <SignInAdmin />,
     id: "admin",
   },
   {
