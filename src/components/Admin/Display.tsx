@@ -13,7 +13,7 @@ export default function DisplayEmployees() {
   return (
     <div className="px-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
       {data.map((item: any, index: number) => {
-        if (item.CIN !== user.CIN) {
+        if (item.email !== user.email) {
           return (
             <ProfileCard key={index} data={item} />
           )

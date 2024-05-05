@@ -54,6 +54,21 @@ const Admin: React.FC = () => {
                 {isloading ? (
                     <Spinner className="w-10 h-10 mt-10" />
                 ) : (<>
+                    <div className="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 p-5">
+                        <Card className="py-10 px-20">
+                            <span className="text-3xl font-bold text-black">Admins</span>
+                            <span className="text-xl">{users.filter((user) => user.role === "Admin").length - 1}{" + You "}</span>
+                        </Card>
+                        <Card className="py-10 px-20">
+                            <span className="text-3xl font-bold text-black">Doctors</span>
+                            <span className="text-xl">{users.filter((user) => user.role === "Doctor").length}{" "}</span>
+                        </Card>
+                        <Card className="py-10 px-20">
+                            <span className="text-3xl font-bold text-black">Patients</span>
+                            <span className="text-xl">{users.filter((user) => user.role === "Patient").length}{" "}</span>
+                        </Card>
+                    </div>
+
                     <DisplayEmployees />
                 </>
                 )}
