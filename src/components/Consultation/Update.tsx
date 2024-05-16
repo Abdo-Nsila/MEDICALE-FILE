@@ -83,19 +83,6 @@ const Update = ({ info }: UpdateProps) => {
                 disabled
                 crossOrigin={"true"}
                 size="lg"
-                placeholder="patient full Name"
-                required={true}
-                name="doctor"
-                defaultValue={info.doctor}
-                className=" !border-t-blue-gray-200 focus:!border-t-gray-900"
-                labelProps={{
-                  className: "before:content-none after:content-none",
-                }}
-              />
-              <Input
-                disabled
-                crossOrigin={"true"}
-                size="lg"
                 placeholder="patient Email"
                 required={true}
                 name="patientEmail"
@@ -111,6 +98,7 @@ const Update = ({ info }: UpdateProps) => {
                 placeholder="patient full Name"
                 required={true}
                 name="patient"
+                defaultValue={info.patient}
                 className=" !border-t-blue-gray-200 focus:!border-t-gray-900"
                 labelProps={{
                   className: "before:content-none after:content-none",
