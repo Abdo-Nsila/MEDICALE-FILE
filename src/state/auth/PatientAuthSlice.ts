@@ -117,6 +117,8 @@ export const checkUserExist = (docId: string): AppThunk => async dispatch => {
       if (docSnap.data().role === "Patient") {
         console.log("Document data:", docSnap.data());
         dispatch(setUser(docSnap.data()));
+      } else {
+        dispatch(setUser(null));
       }
     } else {
       console.log("No such document!")

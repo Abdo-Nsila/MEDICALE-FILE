@@ -75,6 +75,7 @@ const doctorAuth = createSlice({
       state.isLoading = action.payload;
     },
     setUser: (state, action: PayloadAction<DocumentData | UserProfileState | null>) => {
+      console.log("What ?", action.payload)
       state.user = action.payload ? { ...state.user, ...action.payload } : null;
     },
     setMessage: (state, action: PayloadAction<string | null>) => {
@@ -114,11 +115,14 @@ export const checkUserExist = (docId: string): AppThunk => async dispatch => {
     const docRef = doc(db, "users", docId);
     const docSnap = await getDoc(docRef);
     if (docSnap.exists()) {
-      if (docSnap.data().role === "Doctor") {
+      const data = docSnap.data()
+      console.log(data.role)
+      if (data.role === "Doctor") {
         console.log("Document data:", docSnap.data());
-        dispatch(setUser(docSnap.data()));
+        dispatch(setUser(data));
+      } else {
+        dispatch(setUser(null));
       }
-      dispatch(setUser(docSnap.data()));
     } else {
       console.log("No such document!")
       // docSnap.data() will be undefined in this case
@@ -214,6 +218,7 @@ export const login = ({ email, password }: LoginPayload): AppThunk => async (dis
   dispatch(setLoading(true));
   dispatch(clearMessageAndError())
   await dispatch(checkUserExist(email));
+  console.log(getState().doctorAuth.user)
   if (getState().doctorAuth.user) {
     console.log(email, password)
     await signInWithEmailAndPassword(auth, email, password)
