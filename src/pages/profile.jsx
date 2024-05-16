@@ -23,7 +23,8 @@ export function Profile() {
 
   useEffect(() => {
     if (!user) {
-      navigate(`/${user.role.toLowerCase()}/login`);
+      navigate(`/`);
+      // navigate(`/${user.role.toLowerCase()}/login`);
     }
   }, [user]);
 
