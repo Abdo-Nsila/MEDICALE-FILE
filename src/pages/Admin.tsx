@@ -25,7 +25,7 @@ const Admin: React.FC = () => {
 
     useEffect(() => {
         if (user?.role !== "Admin") {
-            navigate("/profile");
+            navigate("/");
         }
         if (users.length === 0) {
             dispatch(getUsers());

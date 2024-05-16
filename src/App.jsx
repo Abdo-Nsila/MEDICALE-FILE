@@ -11,6 +11,7 @@ import SignInPatient from "./components/Auth/PatientAuth/sign-in";
 import SignInDoctor from "./components/Auth/DoctorAuth/sign-in";
 // import SignUpAdmin from "./components/Auth/AdminAuth/sign-up";
 import SignInAdmin from "./components/Auth/AdminAuth/sign-in";
+import Consultation from "./pages/Consultation";
 
 
 function App() {
@@ -44,6 +45,7 @@ function App() {
                 {/* Doctor Auth Paths */}
                 {/* <Route path="/doctor/signin" element={<SignUpDoctor />} /> */}
                 <Route path="/doctor/login" element={<SignInDoctor />} />
+                <Route path="/doctor/consultation" element={<Consultation />} />
                 {/* Admin Auth Paths */}
                 {/* <Route path="/admin/signin" element={<SignUpAdmin />} /> */}
                 <Route path="/admin/login" element={<SignInAdmin />} />
