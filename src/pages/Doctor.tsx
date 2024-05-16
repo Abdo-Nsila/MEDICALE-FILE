@@ -1,8 +1,9 @@
 
+import CreateConsultation from "@/components/Doctor/Create";
 import DisplayEmployees from "@/components/Doctor/Display";
 import { getPatientsUsers } from "@/state/Users/GetSlice";
 import { AppDispatch, RootState } from "@/state/store";
-import { ArrowLeftIcon } from "@heroicons/react/24/outline";
+import { ArrowLeftIcon, RectangleStackIcon } from "@heroicons/react/24/outline";
 import { Button, Card, Spinner } from "@material-tailwind/react";
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
@@ -44,8 +45,13 @@ const Doctor: React.FC = () => {
                         </Button>
                         <h3 className="text-4xl font-bold text-primary">Users</h3>
                     </div>
-                    <div className="h-full flex flex-col gap-2">
-                        {/* <AddEmployee /> */}
+                    <div className="h-full w-full flex flex-col gap-2">
+                        <div className="w-full flex justify-end px-5">
+                            <Button onClick={() => navigate("consultation")} className="bg-green-700 flex justify-center items-center gap-2 cursor-pointer p-2">
+                                <RectangleStackIcon className="w-5" />
+                                Consultation
+                            </Button>
+                        </div>
                     </div>
                 </Card>
 
