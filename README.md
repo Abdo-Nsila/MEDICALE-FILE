@@ -160,5 +160,3 @@ If you have questions or need help integrating the product please [contact us](h
 - [Freebies](https://www.creative-tim.com/bootstrap-themes/free?ref=readme-mtkr) from Creative Tim
 
 - [Affiliate Program](https://www.creative-tim.com/affiliates/new?ref=readme-mtkr) (earn money)
-
-
