@@ -19,7 +19,7 @@ export type ConsultationType = {
     reason: string;
     result: string;
     medication: string;
-    date: Timestamp|string;
+    date: Timestamp | string;
 };
 
 type PatientType = {
@@ -153,6 +153,7 @@ export const getDoctorConsultations = (email: string): AppThunk => async dispatc
 // Async action creator
 export const getPatientConsultations = (email: string): AppThunk => async dispatch => {
     dispatch(setLoading(true));
+    console.log(email)
     dispatch(clearMessageAndError());
     try {
         // Get all employees
@@ -160,9 +161,13 @@ export const getPatientConsultations = (email: string): AppThunk => async dispat
         const consultations: DocumentData = [];
         querySnapshot.forEach((doc) => {
             // doc.data() is never undefined for query doc snapshots
-            consultations.push(doc.data());
+            consultations.push({
+                ...doc.data(),
+                date: doc.data().date.toDate().toLocaleDateString(),
+            });
         });
         dispatch(actionSuccess(consultations));
+        console.log(consultations)
     } catch (error: any) {
         dispatch(actionFailed({ code: error.code, message: error.message }));
     } finally {

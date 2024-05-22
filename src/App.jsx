@@ -12,6 +12,7 @@ import SignInDoctor from "./components/Auth/DoctorAuth/sign-in";
 // import SignUpAdmin from "./components/Auth/AdminAuth/sign-up";
 import SignInAdmin from "./components/Auth/AdminAuth/sign-in";
 import Consultation from "./pages/Consultation";
+import Patient from "./pages/Patient";
 
 
 function App() {
@@ -34,6 +35,8 @@ function App() {
                 <Route index path="/" element={<Home />} />
                 {/* Path Profile for All Role */}
                 <Route path="/profile" element={<Profile />} />
+                {/* Path for µPatient Role */}
+                <Route path="/patient" element={<Patient />} />
                 {/* Path for Doctor Role */}
                 <Route path="/doctor" element={<Doctor />} />
                 {/* Path for Admin Role */}
