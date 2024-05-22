@@ -80,6 +80,11 @@ export function Profile() {
                         <Button onClick={() => navigate("/admin")} className="bg-gray-900 w-fit lg:ml-auto flex gap-2 py-4">                          <ListBulletIcon className="-mt-px h-4 w-4 text-white" />
                           Global List
                         </Button>
+                      ) : 
+                      user?.role === "Patient" ? (
+                        <Button onClick={() => navigate("/patient")} className="bg-gray-900 w-fit lg:ml-auto flex gap-2 py-4">                          <ListBulletIcon className="-mt-px h-4 w-4 text-white" />
+                          Consultation
+                        </Button>
                       ) : null
                   }
                 </div>
