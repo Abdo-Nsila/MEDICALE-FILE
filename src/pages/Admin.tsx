@@ -27,7 +27,7 @@ const Admin: React.FC = () => {
         if (user?.role !== "Admin") {
             navigate("/");
         }
-        if (users.length === 0) {
+        else {
             dispatch(getUsers());
         }
     }, [dispatch]);

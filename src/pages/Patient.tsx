@@ -29,7 +29,7 @@ const Patient: React.FC = () => {
         if (user?.role !== "Patient") {
             navigate("/");
         }
-        if (users.length === 0) {
+        else {
             dispatch(getPatientConsultations(user?.email));
         }
     }, [dispatch]);

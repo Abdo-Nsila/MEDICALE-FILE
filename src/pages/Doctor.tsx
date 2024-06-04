@@ -26,8 +26,7 @@ const Doctor: React.FC = () => {
     useEffect(() => {
         if (user?.role !== "Doctor") {
             navigate("/profile");
-        }
-        if (users.length === 0) {
+        } else {
             dispatch(getPatientsUsers());
         }
     }, [dispatch]);
