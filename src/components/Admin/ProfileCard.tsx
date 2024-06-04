@@ -22,8 +22,8 @@ const ProfileCard: React.FC<ProfileCardProps> = ({ data }) => {
       <div className="p-4 flex flex-col items-center">
         <div className="h-32 w-32 bg-blue-gray-300 rounded-full flex justify-center items-center text-5xl">
           <h3>
-            {data?.fullName?.split(" ")[0].charAt(0).toUpperCase()}
-            {data?.fullName?.split(" ")[1].charAt(0).toUpperCase()}
+            {data?.fullName?.split(" ")[0].charAt(0).toUpperCase() || "First Name"}
+            {data?.fullName?.split(" ")[1].charAt(0).toUpperCase() || "Last Name"}
           </h3>
         </div>
         <div className="text-center">
