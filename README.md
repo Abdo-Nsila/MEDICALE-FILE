@@ -146,10 +146,6 @@ We use GitHub Issues as the official bug tracker for the Material Tailwind Kit R
 
 If you have questions or need help integrating the product please [contact us](https://www.creative-tim.com/contact-us?ref=readme-mtkr) instead of opening an issue.
 
-## Licensing
-
-- Copyright 2023 [Creative Tim](https://www.creative-tim.com?ref=readme-mtkr)
-- Creative Tim [license](https://www.creative-tim.com/license?ref=readme-mtkr)
 
 ## Useful Links
 
